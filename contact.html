@@ -3,15 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - TaskForceTech</title>
+    <title>Contact Us - Task Force Technologies</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
 </head>
 <body>
     <header>
-        <h1>Contact TaskForceTech</h1>
+        <div class="logo">
+            <img src="tft-logo.png" alt="Task Force Technologies Logo">
+        </div>
+        <h1>Contact Task Force Technologies</h1>
     </header>
+
     <main>
-        <p>Have questions or feedback? Reach out to us!</p>
-        <p>Email: support@taskforcetech.com</p>
-      </main>
+        <section class="contact-info">
+            <h2>We’d love to hear from you!</h2>
+            <p>Have questions, suggestions, or feedback? Reach out to us using the details below.</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:support@taskforcetech.com">support@taskforcetech.com</a></li>
+                <li><strong>Phone:</strong> (123) 456-7890</li>
+                <li><strong>Address:</strong> 123 Cyber Street, Fayetteville, NC</li>
+            </ul>
+        </section>
+
+        <section class="contact-form">
+            <h2>Send us a message</h2>
+            <form action="submit-form.php" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Task Force Technologies. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
+
