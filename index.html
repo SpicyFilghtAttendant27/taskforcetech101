@@ -43,13 +43,13 @@
             max-width: 800px;
             border-radius: 10px;
         }
-        /* Hide the background music video */
+        /* Hidden iframe for background music */
         #background-music {
-            position: absolute;
-            left: -9999px;
             width: 1px;
             height: 1px;
-            opacity: 0;
+            opacity: 0.01;
+            position: absolute;
+            left: -9999px;
         }
     </style>
 </head>
@@ -87,7 +87,7 @@
         <!-- YouTube Video Section -->
         <div class="video-container">
             <h2>Cybersecurity Tips by NetworkChuck</h2>
-            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Cybersecurity Video by NetworkChuck" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=0&rel=0" title="Cybersecurity Video by NetworkChuck" allowfullscreen></iframe>
             <p><em>Video by <a href="https://www.youtube.com/c/NetworkChuck" target="_blank">NetworkChuck</a>. TaskForceTech does not own this content.</em></p>
         </div>
     </main>
@@ -96,12 +96,12 @@
         <p>&copy; 2023 TaskForceTech. All rights reserved.</p>
     </footer>
 
-    <!-- Background Music -->
+    <!-- Background Music (Autoplays when user clicks a button) -->
     <iframe 
         id="background-music" 
-        src="https://www.youtube.com/embed/Z-VfaG9ZN_U?autoplay=1&loop=1&playlist=Z-VfaG9ZN_U" 
-        allow="autoplay"
-    ></iframe>
+        src="https://www.youtube.com/embed/Z-VfaG9ZN_U?autoplay=1&mute=1&loop=1&playlist=Z-VfaG9ZN_U" 
+        allow="autoplay">
+    </iframe>
 
     <script>
         // Timer-based cybersecurity alert
@@ -110,6 +110,20 @@
                 document.getElementById("alert-box").style.display = "block";
             }, 5000); // Alert triggers after 5 seconds
         });
+
+        // Ensure background music plays after user interaction
+        function playMusic() {
+            let musicFrame = document.getElementById("background-music");
+            musicFrame.src = "https://www.youtube.com/embed/Z-VfaG9ZN_U?autoplay=1&mute=0&loop=1&playlist=Z-VfaG9ZN_U";
+        }
+
+        // Add a play music button for user interaction
+        window.onload = function() {
+            let playButton = document.createElement("button");
+            playButton.innerText = "Play Background Music";
+            playButton.onclick = playMusic;
+            document.body.insertBefore(playButton, document.body.firstChild);
+        };
     </script>
 </body>
 </html>
