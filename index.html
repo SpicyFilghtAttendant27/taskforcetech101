@@ -43,13 +43,30 @@
             max-width: 800px;
             border-radius: 10px;
         }
-        /* Hidden iframe for background music */
-        #background-music {
-            width: 1px;
-            height: 1px;
-            opacity: 0.01;
-            position: absolute;
-            left: -9999px;
+        .contact-form {
+            margin-top: 20px;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 8px;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 90%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+        }
+        .contact-form input[type="submit"] {
+            background-color: #008CBA;
+            cursor: pointer;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #005f73;
         }
     </style>
 </head>
@@ -84,6 +101,23 @@
         <button id="random-tip-btn">Get a Random Cybersecurity Tip</button>
         <p id="random-tip-display"></p>
 
+        <!-- Contact Form Section -->
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form action="process_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
         <!-- YouTube Video Section -->
         <div class="video-container">
             <h2>Cybersecurity Tips by NetworkChuck</h2>
@@ -96,13 +130,6 @@
         <p>&copy; 2023 TaskForceTech. All rights reserved.</p>
     </footer>
 
-    <!-- Background Music (Autoplays when user clicks a button) -->
-    <iframe 
-        id="background-music" 
-        src="https://www.youtube.com/embed/Z-VfaG9ZN_U?autoplay=1&mute=1&loop=1&playlist=Z-VfaG9ZN_U" 
-        allow="autoplay">
-    </iframe>
-
     <script>
         // Timer-based cybersecurity alert
         document.getElementById("start-timer").addEventListener("click", function() {
@@ -110,20 +137,6 @@
                 document.getElementById("alert-box").style.display = "block";
             }, 5000); // Alert triggers after 5 seconds
         });
-
-        // Ensure background music plays after user interaction
-        function playMusic() {
-            let musicFrame = document.getElementById("background-music");
-            musicFrame.src = "https://www.youtube.com/embed/Z-VfaG9ZN_U?autoplay=1&mute=0&loop=1&playlist=Z-VfaG9ZN_U";
-        }
-
-        // Add a play music button for user interaction
-        window.onload = function() {
-            let playButton = document.createElement("button");
-            playButton.innerText = "Play Background Music";
-            playButton.onclick = playMusic;
-            document.body.insertBefore(playButton, document.body.firstChild);
-        };
     </script>
 </body>
 </html>
