@@ -3,155 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskForceTech</title>
+    <title>About Us - TaskForceTech</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        body, html {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #004080;
             color: white;
+            padding: 20px 0;
             text-align: center;
         }
-        /* Video Container */
-        #video-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-        /* Gradient Overlay */
-        #video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(255, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-            z-index: 1;
-        }
-        /* Main Content */
-        .content {
-            position: relative;
-            z-index: 2;
-            padding: 20px;
-        }
-        header img {
-            display: block;
-            margin: 0 auto;
-            width: 200px;
+        header .logo img {
+            width: 150px;
             height: auto;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
         }
         nav ul {
             list-style-type: none;
+            margin: 0;
             padding: 0;
+            text-align: center;
         }
         nav ul li {
             display: inline;
-            margin: 0 10px;
         }
         nav ul li a {
+            display: inline-block;
             color: white;
+            padding: 14px 20px;
             text-decoration: none;
         }
-        .security-tip {
-            padding: 10px;
-            margin: 10px auto;
-            width: 50%;
-            border-radius: 5px;
-            background-color: #222;
-            transition: background-color 0.3s ease;
-            cursor: pointer;
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #004080;
         }
-        .danger:hover { background-color: red; }
-        .safe:hover { background-color: green; }
-        #alert-box {
-            display: none;
-            padding: 15px;
-            margin: 20px auto;
-            width: 60%;
-            background-color: orange;
-            color: black;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-        .contact-form {
-            margin-top: 20px;
-            background-color: #222;
+        main {
             padding: 20px;
-            border-radius: 8px;
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
         }
-        .contact-form input, .contact-form textarea {
-            width: 90%;
-            padding: 10px;
-            margin-top: 10px;
-            border: none;
-            border-radius: 5px;
+        h2 {
+            color: #004080;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        footer {
             background-color: #333;
             color: white;
-        }
-        .contact-form input[type="submit"] {
-            background-color: #008CBA;
-            cursor: pointer;
-        }
-        .contact-form input[type="submit"]:hover {
-            background-color: #005f73;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
-    <!-- Video Background Container -->
-    <div id="video-container">
-        <div id="video-overlay"></div>
-        <div id="player"></div>
-    </div>
-
-    <!-- Main Content -->
-    <div class="content">
-        <header>
-            <img src="tft-logo.png" alt="Task Force Technologies Logo">
-            <h1>Welcome to TaskForceTech</h1>
-            <p>Your hub for cybersecurity training and IT certifications.</p>
-        </header>
-
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="tft-logo.png" alt="TaskForceTech Logo">
+        </div>
         <nav>
             <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="cissp.html">CISSP</a></li>
-                <li><a href="crisc.html">CRISC</a></li>
-                <li><a href="securityplus.html">Security+</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+    </header>
 
-        <main>
-            <p>We provide resources, guides, and tips to help you succeed in your IT career.</p>
+    <!-- Main Content Section -->
+    <main>
+        <section class="intro">
+            <h1>About TaskForceTech</h1>
+            <p>Empowering IT professionals with the knowledge and resources to excel in the ever-evolving tech industry.</p>
+        </section>
 
-            <h2>Cybersecurity Best Practices</h2>
-            <div class="security-tip danger">🚨 Beware of phishing emails!</div>
-            <div class="security-tip safe">🔒 Always enable Multi-Factor Authentication (MFA).</div>
+        <section class="who-we-are">
+            <h2>Who We Are</h2>
+            <p><strong>TaskForceTech</strong> is a leading IT consulting and training firm specializing in cybersecurity, cloud computing, and IT governance. Our team comprises seasoned professionals with extensive experience in delivering customized solutions and training programs that align with industry standards and best practices.</p>
+        </section>
 
-            <button id="start-timer">Start Security Alert</button>
-            <div id="alert-box">This is a security alert!</div>
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <p>We aim to bridge the skills gap in the IT sector by providing high-quality training and consulting services. Our focus is on equipping professionals with the competencies required to navigate and lead in today's dynamic technological landscape.</p>
+        </section>
 
-            <h3>Need More Tips?</h3>
-            <button id="random-tip-btn">Get a Random Cybersecurity Tip</button>
-            <p id="random-tip-display"></p>
+        <section class="certifications">
+            <h2>Certifications We Offer</h2>
+            <p>We provide training and support for a wide range of industry-recognized certifications, including:</p>
+            <ul>
+                <li><strong>CompTIA:</strong> Security+, Network+, CySA+, PenTest+, CASP+, Linux+</li>
+                <li><strong>(ISC)²:</strong> CISSP, SSCP</li>
+                <li><strong>ISACA:</strong> CRISC, CISA, CISM</li>
+                <li><strong>AWS:</strong> AWS Certified Solutions Architect, AWS Certified Security Specialist</li>
+                <li><strong>PMI:</strong> Project Management Professional (PMP), Agile Certified Practitioner (PMI-ACP)</li>
+            </ul>
+        </section>
 
-            <!-- Contact Form Section -->
+        <section class="why-choose-us">
+            <h2>Why Choose TaskForceTech?</h2>
+            <ul>
+                <li>Access to experienced and certified instructors.</li>
+                <li>Comprehensive resources for both beginners and advanced learners.</li>
+                <li>Specialized training in high-demand areas such as cybersecurity, cloud computing, and risk management.</li>
+                <li>Commitment to delivering practical, real-world insights and mentorship.</li>
+            </ul>
+        </section>
+
+        <section class="resources">
+            <h2>Our Services</h2>
+            <ul>
+                <li>In-depth certification study guides and training programs.</li>
+                <li>Career counseling and professional development mentorship.</li>
+                <li>Insights into emerging technology trends and industry best practices.</li>
+                <li>Customized exam preparation strategies and tips.</li>
+            </ul>
+        </section>
+
+        <section class="contact">
             <h2>Contact Us</h2>
-            <div class="contact-form">
-                <form action="process_form.php" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required><br>
+            <p>If you're seeking guidance or have any questions, feel free to reach out. We're here to support you on your journey to IT excellence!</p>
+        </section>
+    </main>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id=" 
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 TaskForceTech. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
