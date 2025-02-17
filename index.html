@@ -4,13 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TaskForceTech</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #1a1a1a;
             color: white;
             text-align: center;
+            margin: 0;
+            overflow: hidden;
+        }
+        /* Video Background Styling */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .video-background iframe {
+            width: 100%;
+            height: 100%;
+        }
+        /* Main Content Styling */
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+        header img {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: auto;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
         }
         .security-tip {
             padding: 10px;
@@ -32,16 +71,6 @@
             color: black;
             font-weight: bold;
             border-radius: 5px;
-        }
-        .video-container {
-            margin-top: 20px;
-            text-align: center;
-        }
-        iframe {
-            width: 80%;
-            height: 400px;
-            max-width: 800px;
-            border-radius: 10px;
         }
         .contact-form {
             margin-top: 20px;
@@ -71,63 +100,64 @@
     </style>
 </head>
 <body>
-    <header>
-        <img src="tft-logo.png" alt="Task Force Technologies Logo" style="display: block; margin: 0 auto; width: 200px; height: auto;">
-        <h1>Welcome to TaskForceTech</h1>
-        <p>Your hub for cybersecurity training and IT certifications.</p>
-    </header>
+    <!-- Video Background -->
+    <div class="video-background">
+        <iframe src="https://www.youtube.com/embed/_tUBCmGBO3A?autoplay=1&mute=1&controls=0&start=829&loop=1&playlist=_tUBCmGBO3A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
 
-    <nav>
-        <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="cissp.html">CISSP</a></li>
-            <li><a href="crisc.html">CRISC</a></li>
-            <li><a href="securityplus.html">Security+</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
+    <!-- Main Content -->
+    <div class="content">
+        <header>
+            <img src="tft-logo.png" alt="Task Force Technologies Logo">
+            <h1>Welcome to TaskForceTech</h1>
+            <p>Your hub for cybersecurity training and IT certifications.</p>
+        </header>
 
-    <main>
-        <p>We provide resources, guides, and tips to help you succeed in your IT career.</p>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="cissp.html">CISSP</a></li>
+                <li><a href="crisc.html">CRISC</a></li>
+                <li><a href="securityplus.html">Security+</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
 
-        <h2>Cybersecurity Best Practices</h2>
-        <div class="security-tip danger">🚨 Beware of phishing emails!</div>
-        <div class="security-tip safe">🔒 Always enable Multi-Factor Authentication (MFA).</div>
+        <main>
+            <p>We provide resources, guides, and tips to help you succeed in your IT career.</p>
 
-        <button id="start-timer">Start Security Alert</button>
-        <div id="alert-box"></div>
+            <h2>Cybersecurity Best Practices</h2>
+            <div class="security-tip danger">🚨 Beware of phishing emails!</div>
+            <div class="security-tip safe">🔒 Always enable Multi-Factor Authentication (MFA).</div>
 
-        <h3>Need More Tips?</h3>
-        <button id="random-tip-btn">Get a Random Cybersecurity Tip</button>
-        <p id="random-tip-display"></p>
+            <button id="start-timer">Start Security Alert</button>
+            <div id="alert-box">This is a security alert!</div>
 
-        <!-- Contact Form Section -->
-        <h2>Contact Us</h2>
-        <div class="contact-form">
-            <form action="process_form.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br>
+            <h3>Need More Tips?</h3>
+            <button id="random-tip-btn">Get a Random Cybersecurity Tip</button>
+            <p id="random-tip-display"></p>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br>
+            <!-- Contact Form Section -->
+            <h2>Contact Us</h2>
+            <div class="contact-form">
+                <form action="process_form.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br>
 
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
 
-                <input type="submit" value="Submit">
-            </form>
-        </div>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea><br>
 
-        <!-- YouTube Video Section -->
-        <div class="video-container">
-            <h2>Cybersecurity Tips by NetworkChuck</h2>
-            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=0&rel=0" title="Cybersecurity Video by NetworkChuck" allowfullscreen></iframe>
-            <p><em>Video by <a href="https://www.youtube.com/c/NetworkChuck" target="_blank">NetworkChuck</a>. TaskForceTech does not own this content.</em></p>
-        </div>
-    </main>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </main>
+    </div>
 
     <footer>
-        <p>&copy; 2023 TaskForceTech. All rights reserved.</p>
+        <p>&copy; 2025 TaskForceTech. All rights reserved.</p>
     </footer>
 
     <script>
@@ -136,6 +166,20 @@
             setTimeout(() => {
                 document.getElementById("alert-box").style.display = "block";
             }, 5000); // Alert triggers after 5 seconds
+        });
+
+        // Random cybersecurity tips
+        const tips = [
+            "Use strong, unique passwords for each account.",
+            "Regularly update your software to patch security vulnerabilities.",
+            "Be cautious of unsolicited emails asking for personal information.",
+            "Use antivirus software and keep it updated.",
+            "Regularly back up important data to secure locations."
+        ];
+
+        document.getElementById("random-tip-btn").addEventListener("click", function() {
+            const randomTip = tips[Math.floor(Math.random() * tips.length)];
+            document.getElementById("random-tip-display").textContent = randomTip;
         });
     </script>
 </body>
