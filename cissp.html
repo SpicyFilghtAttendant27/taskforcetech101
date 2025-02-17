@@ -3,8 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskForceTech</title>
+    <title>TaskForceTech - CISSP Certification</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #004080;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .header .logo img {
+            width: 150px;
+            height: auto;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .navbar ul li {
+            display: inline;
+        }
+        .navbar ul li a {
+            display: inline-block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            background-color: #004080;
+        }
+        .container {
+            padding: 20px;
+        }
+        h2 {
+            color: #004080;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        .exam-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .exam-table th,
+        .exam-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .exam-table th {
+            background-color: #004080;
+            color: white;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -12,33 +86,94 @@
             <img src="CISSP_logo.png" alt="CISSP Logo">
         </div>
         <h1>Certified Information Systems Security Professional (CISSP)</h1>
-        <!-- Navigation Bar -->
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="cissp.html">CISSP</a></li>
-                <li><a href="crisc.html">CRISC</a></li>
-                <li><a href="securityplus.html">Security+</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
     </header>
 
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="cissp.html">CISSP</a></li>
+            <li><a href="crisc.html">CRISC</a></li>
+            <li><a href="securityplus.html">Security+</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
     <main class="container">
-        <!-- Page Content -->
         <section class="overview">
             <h2>Overview</h2>
             <p>
-                The <strong>Certified Information Systems Security Professional (CISSP)</strong> is one of the most sought-after certifications in cybersecurity. Offered by <a href="https://www.isc2.org/Certifications/CISSP" target="_blank">(ISC)²</a>, CISSP validates expertise in designing, implementing, and managing security programs.
+                The <strong>Certified Information Systems Security Professional (CISSP)</strong> is a globally recognized certification in the field of information security. Offered by the <a href="https://www.isc2.org/Certifications/CISSP" target="_blank">International Information System Security Certification Consortium (ISC)²</a>, the CISSP credential validates an individual's expertise in designing, implementing, and managing a best-in-class cybersecurity program.
             </p>
         </section>
 
-        <!-- Additional sections... -->
-    </main>
+        <section class="domains">
+            <h2>Key Domains</h2>
+            <p>The CISSP certification encompasses eight domains:</p>
+            <ol>
+                <li>Security and Risk Management</li>
+                <li>Asset Security</li>
+                <li>Security Architecture and Engineering</li>
+                <li>Communication and Network Security</li>
+                <li>Identity and Access Management (IAM)</li>
+                <li>Security Assessment and Testing</li>
+                <li>Security Operations</li>
+                <li>Software Development Security</li>
+            </ol>
+        </section>
 
-    <footer class="footer">
-        <p>&copy; 2025 TaskForceTech. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+        <section class="benefits">
+            <h2>Benefits of CISSP Certification</h2>
+            <ul>
+                <li>Globally recognized credential, enhancing professional credibility.</li>
+                <li>Validates comprehensive knowledge across various security practices and principles.</li>
+                <li>Opens opportunities for advanced roles such as Chief Information Security Officer, Security Manager, and Security Consultant.</li>
+                <li>Access to a global community of cybersecurity professionals and resources.</li>
+            </ul>
+        </section>
+
+        <section class="requirements">
+            <h2>Certification Requirements</h2>
+            <p>To earn the CISSP certification, candidates must:</p>
+            <ul>
+                <li>Have a minimum of five years cumulative, paid, full-time work experience in two or more of the eight domains of the CISSP CBK.</li>
+                <li>A one-year experience waiver is available for candidates with a four-year college degree or an approved credential.</li>
+                <li>Pass the CISSP examination with a scaled score of 700 points or greater out of 1000 possible points.</li>
+                <li>Adhere to the (ISC)² Code of Ethics.</li>
+                <li>Get endorsed by an (ISC)² certified professional in good standing.</li>
+            </ul>
+            <p>For those lacking the required experience, passing the exam can earn the Associate of (ISC)² designation, allowing six years to gain the necessary experience.</p>
+        </section>
+
+        <section class="exam-details">
+            <h2>Exam Details</h2>
+            <table class="exam-table">
+                <tr>
+                    <th>Format</th>
+                    <td>Computerized Adaptive Testing (CAT)</td>
+                </tr>
+                <tr>
+                    <th>Number of Questions</th>
+                    <td>100–150 multiple-choice and advanced innovative questions</td>
+                </tr>
+                <tr>
+                    <th>Duration</th>
+                    <td>3 hours</td>
+                </tr>
+                <tr>
+                    <th>Passing Score</th>
+                    <td>700 out of 1000 points</td>
+                </tr>
+                <tr>
+                    <th>Exam Fee</th>
+                    <td>$749 USD</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="study-resources">
+            <h2>Study Resources</h2>
+            <ul>
+                <li><a href="https://www.isc2.org/Certifications/CISSP" target="_
+::contentReference[oaicite:0]{index=0}
+ 
