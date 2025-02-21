@@ -5,84 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - TaskForceTech</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background-color: #004080; /* TFT Blue */
-            color: white;
-            padding: 20px 0;
-        }
-        header .logo img {
-            width: 150px;
-            height: auto;
-        }
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #004080;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        /* Cyber Tip Box */
-        .cyber-tip-box {
-            background-color: #fff;
-            border: 2px solid #004080; /* Matches TFT Blue */
-            color: #004080;
-            padding: 20px;
-            margin-top: 30px;
-            font-size: 1.2em;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .cyber-tip-box h3 {
-            margin-top: 0;
-            font-size: 1.5em;
-            color: #004080;
-        }
-
-        .cyber-tip-box p {
-            font-style: italic;
-            margin-bottom: 0;
-        }
-
-        /* Button Style */
-        .btn {
-            background-color: #004080;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            margin-top: 20px;
-        }
-
-        .btn:hover {
-            background-color: #003366;
-        }
-    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -90,45 +12,28 @@
         <div class="logo">
             <img src="tft-logo.png" alt="TaskForceTech Logo">
         </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="cybersecurity-tips.html">Cybersecurity Tips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Main Content Section -->
     <main>
-        <section class="mission">
-            <h2>Our Mission</h2>
-            <p><strong>TaskForceTech</strong> is dedicated to empowering IT professionals with the knowledge and resources they need to succeed in the ever-evolving technology landscape. We provide top-tier cybersecurity, cloud computing, and IT governance training, mentorship, and certifications to ensure that professionals are ready for the challenges ahead.</p>
-        </section>
-
-        <!-- Cybersecurity Tip Box -->
-        <section class="cyber-tip-box">
-            <h3>Cybersecurity Tip of the Day</h3>
-            <p id="tip-text"><strong>Always use multi-factor authentication (MFA)</strong> to add an extra layer of security to your online accounts. Even if your password is compromised, MFA can help prevent unauthorized access.</p>
-            <button class="btn" onclick="changeTip()">Get New Tip</button>
+        <section class="intro">
+            <h1>Welcome to TaskForceTech</h1>
+            <p>Empowering IT professionals with the knowledge and resources to excel in the ever-evolving tech industry.</p>
         </section>
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2023 TaskForceTech. All rights reserved.</p>
+        <p>&copy; 2023 TaskForceTech. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        const tips = [
-            "Always use multi-factor authentication (MFA) to add an extra layer of security to your online accounts.",
-            "Update your passwords regularly and make sure they're complex and unique.",
-            "Avoid using public Wi-Fi for sensitive activities like banking or logging into work accounts.",
-            "Install a reputable antivirus software to help protect your devices from malware.",
-            "Be cautious of phishing emails and always verify the sender before clicking links or opening attachments."
-        ];
-
-        function changeTip() {
-            // Get a random tip from the array
-            const randomIndex = Math.floor(Math.random() * tips.length);
-            const newTip = tips[randomIndex];
-
-            // Update the tip text
-            document.getElementById("tip-text").innerText = newTip;
-        }
-    </script>
 </body>
 </html>
