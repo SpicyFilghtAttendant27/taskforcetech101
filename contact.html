@@ -3,8 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - TaskForceTech</title>
+    <title>Home - TaskForceTech</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #004080; /* TFT Blue */
+            color: white;
+            padding: 20px 0;
+        }
+        header .logo img {
+            width: 150px;
+            height: auto;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #004080;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Cyber Tip Box */
+        .cyber-tip-box {
+            background-color: #fff;
+            border: 2px solid #004080; /* Matches TFT Blue */
+            color: #004080;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cyber-tip-box h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #004080;
+        }
+
+        .cyber-tip-box p {
+            font-style: italic;
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -22,38 +84,23 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
+    <!-- Main Content Section -->
     <main>
-        <section class="contact-info">
-            <h2>We’d love to hear from you!</h2>
-            <p>Have questions, suggestions, or feedback? Reach out to us using the details below.</p>
-            <ul>
-                <li><strong>Email:</strong> <a href="mailto:support@taskforcetech.com">support@taskforcetech.com</a></li>
-                <li><strong>Phone:</strong> (123) 456-7890</li>
-                <li><strong>Address:</strong> 123 Cyber Street, Fayetteville, NC</li>
-            </ul>
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <p><strong>TaskForceTech</strong> is dedicated to empowering IT professionals with the knowledge and resources they need to succeed in the ever-evolving technology landscape. We provide top-tier cybersecurity, cloud computing, and IT governance training, mentorship, and certifications to ensure that professionals are ready for the challenges ahead.</p>
         </section>
 
-        <section class="contact-form">
-            <h2>Send us a message</h2>
-            <form action="submit-form.php" method="POST">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
+        <!-- Cybersecurity Tip Box -->
+        <section class="cyber-tip-box">
+            <h3>Cybersecurity Tip of the Day</h3>
+            <p><strong>Always use multi-factor authentication (MFA)</strong> to add an extra layer of security to your online accounts. Even if your password is compromised, MFA can help prevent unauthorized access.</p>
         </section>
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 TaskForceTech. All Rights Reserved.</p>
+        <p>&copy; 2023 TaskForceTech. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
