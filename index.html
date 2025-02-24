@@ -5,6 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - TaskForceTech</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #ff0000; /* Red background */
+            color: black;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header .logo img {
+            width: 100px; /* Smaller logo size */
+            height: auto;
+        }
+
+        nav {
+            background-color: #000000; /* Black background */
+            overflow: hidden;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            color: black;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #ff0000; /* Red background on hover */
+            color: white;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #004080;
+        }
+
+        .cyber-tip-box {
+            background-color: #fff;
+            border: 2px solid #004080; /* Matches TFT Blue */
+            color: #004080;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cyber-tip-box h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #004080;
+        }
+
+        .cyber-tip-box p {
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        footer {
+            background-color: #000000; /* Black background */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -12,18 +108,20 @@
         <div class="logo">
             <img src="tft-logo.png" alt="TaskForceTech Logo">
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="cybersecurity-tips.html">Cybersecurity Tips</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Main Content -->
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="cybersecurity-tips.html">Cybersecurity Tips</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
     <main>
         <section class="intro">
             <h1>Welcome to TaskForceTech</h1>
