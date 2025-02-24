@@ -5,11 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRISC Certification - TaskForceTech</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header and Footer Styles */
+        header {
+            background-color: black; /* Black background for header */
+            color: red; /* Red text */
+            padding: 20px;
+            text-align: center;
+        }
+
+        header .logo img {
+            width: 100px; /* Smaller logo */
+            height: auto;
+        }
+
+        footer {
+            background-color: black; /* Black background for footer */
+            color: red; /* Red text */
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: black;
+            color: red;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            color: red;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: red;
+            color: black;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px;
+            max-width: 100%;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        h2 {
+            color: red;
+        }
+
+        /* Remove Bullets from Lists */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        table th {
+            background-color: black;
+            color: red;
+        }
+
+    </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <div class="logo">
-            <img src="crisc_logo.png"> 
+            <img src="crisc_logo.png" alt="CRISC Logo">
         </div>
         <h1>Certified in Risk and Information Systems Control (CRISC)</h1>
     </header>
@@ -39,12 +144,12 @@
         <section class="key-domains">
             <h2>Key Domains</h2>
             <p>The CRISC certification encompasses four primary domains:</p>
-            <ol>
+            <ul>
                 <li><strong>Governance</strong>: Understanding organizational governance and risk management frameworks.</li>
                 <li><strong>IT Risk Assessment</strong>: Identifying and assessing IT risk to ensure alignment with the organization's risk appetite and tolerance.</li>
                 <li><strong>Risk Response and Reporting</strong>: Developing and implementing risk responses to ensure that risk factors are managed effectively.</li>
                 <li><strong>Information Technology and Security</strong>: Overseeing IT operations and cybersecurity measures to safeguard information assets.</li>
-            </ol>
+            </ul>
         </section>
 
         <!-- Benefits Section -->
