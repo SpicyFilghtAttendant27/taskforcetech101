@@ -12,81 +12,103 @@
             color: #333;
             margin: 0;
             padding: 0;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
         }
+
         header {
-            background-color: #004080;
-            color: white;
-            padding: 20px 0;
+            background-color: #000000; /* Black header */
+            color: #ff0000; /* Red text */
+            padding: 10px 0;
             text-align: center;
         }
+
         header .logo img {
-            width: 150px;
+            width: 100px; /* Smaller logo */
             height: auto;
         }
+
         nav {
-            background-color: #333;
+            background-color: #000000; /* Black navigation bar */
             overflow: hidden;
         }
+
         nav ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             text-align: center;
         }
+
         nav ul li {
             display: inline;
         }
+
         nav ul li a {
             display: inline-block;
-            color: white;
+            color: #ff0000; /* Red text */
             padding: 14px 20px;
             text-decoration: none;
         }
+
         nav ul li a:hover,
         nav ul li a.active {
-            background-color: #004080;
+            background-color: #004080; /* Blue background on hover or active */
+            color: white;
         }
+
         main {
             padding: 20px;
+            background-color: #ff0000; /* Red background for content */
+            color: black; /* Black text */
+            flex: 1;
         }
+
         h2 {
-            color: #004080;
+            color: #004080; /* Blue color for section headers */
         }
+
+        footer {
+            background-color: #000000; /* Black footer */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Remove bullets/numbers from lists */
         ul, ol {
-            margin-left: 20px;
+            list-style: none;
+            margin-left: 0;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
         }
+
         table th,
         table td {
             border: 1px solid #ddd;
             padding: 8px;
+            text-align: left;
         }
+
         table th {
             background-color: #004080;
             color: white;
         }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <div class="logo">
             <img src="sec+.png" alt="CompTIA Security+ Logo">
         </div>
         <h1>CompTIA Security+ Certification</h1>
-        <p class="tagline">Your Gateway to a Cybersecurity Career</p>
+        <p>Your Gateway to a Cybersecurity Career</p>
     </header>
 
     <!-- Navigation Menu -->
@@ -106,29 +128,29 @@
         <section class="overview">
             <h2>Overview</h2>
             <p>
-                The <strong>CompTIA Security+</strong> certification is a globally recognized credential that validates the foundational skills necessary to perform core security functions and pursue an IT security career. It emphasizes hands-on practical skills, ensuring that security professionals are prepared to address a wide variety of issues. :contentReference[oaicite:0]{index=0}
+                The <strong>CompTIA Security+</strong> certification is a globally recognized credential that validates the foundational skills necessary to perform core security functions and pursue an IT security career. It emphasizes hands-on practical skills, ensuring that security professionals are prepared to address a wide variety of issues.
             </p>
         </section>
 
         <section class="key-domains">
             <h2>Key Domains</h2>
             <p>The Security+ certification covers the following domains:</p>
-            <ol>
-                <li><strong>Attacks, Threats, and Vulnerabilities</strong>: Analyzing indicators of compromise and determining types of malware, attacks, and vulnerabilities. :contentReference[oaicite:1]{index=1}</li>
-                <li><strong>Architecture and Design</strong>: Implementing secure network architecture concepts and systems design. :contentReference[oaicite:2]{index=2}</li>
-                <li><strong>Implementation</strong>: Installing, configuring, and deploying network components while assessing and troubleshooting issues to support organizational security. :contentReference[oaicite:3]{index=3}</li>
-                <li><strong>Operations and Incident Response</strong>: Monitoring and securing hybrid environments, including cloud, mobile, and IoT, and operating with an awareness of applicable regulations and policies. :contentReference[oaicite:4]{index=4}</li>
-                <li><strong>Governance, Risk, and Compliance</strong>: Implementing and summarizing risk management best practices and understanding the business impact. :contentReference[oaicite:5]{index=5}</li>
-            </ol>
+            <ul>
+                <li><strong>Attacks, Threats, and Vulnerabilities</strong>: Analyzing indicators of compromise and determining types of malware, attacks, and vulnerabilities.</li>
+                <li><strong>Architecture and Design</strong>: Implementing secure network architecture concepts and systems design.</li>
+                <li><strong>Implementation</strong>: Installing, configuring, and deploying network components while assessing and troubleshooting issues to support organizational security.</li>
+                <li><strong>Operations and Incident Response</strong>: Monitoring and securing hybrid environments, including cloud, mobile, and IoT, and operating with an awareness of applicable regulations and policies.</li>
+                <li><strong>Governance, Risk, and Compliance</strong>: Implementing and summarizing risk management best practices and understanding the business impact.</li>
+            </ul>
         </section>
 
         <section class="benefits">
             <h2>Why Choose CompTIA Security+?</h2>
             <ul>
-                <li><strong>Globally Recognized Credential</strong>: Validates your expertise and is respected by employers worldwide. :contentReference[oaicite:6]{index=6}</li>
-                <li><strong>Vendor-Neutral Certification</strong>: Equips you with skills applicable across various platforms and technologies. :contentReference[oaicite:7]{index=7}</li>
-                <li><strong>Compliance with Industry Standards</strong>: Approved by the U.S. Department of Defense to meet directive 8140/8570.01-M requirements. :contentReference[oaicite:8]{index=8}</li>
-                <li><strong>Foundation for Advanced Certifications</strong>: Serves as a springboard for intermediate-level cybersecurity jobs and advanced certifications. :contentReference[oaicite:9]{index=9}</li>
+                <li><strong>Globally Recognized Credential</strong>: Validates your expertise and is respected by employers worldwide.</li>
+                <li><strong>Vendor-Neutral Certification</strong>: Equips you with skills applicable across various platforms and technologies.</li>
+                <li><strong>Compliance with Industry Standards</strong>: Approved by the U.S. Department of Defense to meet directive 8140/8570.01-M requirements.</li>
+                <li><strong>Foundation for Advanced Certifications</strong>: Serves as a springboard for intermediate-level cybersecurity jobs and advanced certifications.</li>
             </ul>
         </section>
 
@@ -157,6 +179,15 @@
                 </tr>
                 <tr>
                     <th>Recommended Experience</th>
-                    <td>At least two years of
-::contentReference[oaicite:10]{index=10}
- 
+                    <td>At least two years of work experience in IT with a security focus</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 TaskForceTech. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
