@@ -8,15 +8,17 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: red; /* Set red background */
+            color: black; /* Set font color to black */
             margin: 0;
             padding: 0;
+            height: 100vh; /* Ensure full page height */
+            display: flex;
+            flex-direction: column;
         }
-        /* Header Section */
         .header {
-            background-color: #ff0000; /* Red background */
-            color: black; /* Black font */
+            background-color: #333; /* Black header */
+            color: white;
             padding: 20px 0;
             text-align: center;
         }
@@ -24,9 +26,8 @@
             width: 100px; /* Smaller logo */
             height: auto;
         }
-        /* Navigation Bar */
         .navbar {
-            background-color: #333;
+            background-color: #333; /* Black navbar */
             overflow: hidden;
         }
         .navbar ul {
@@ -48,25 +49,24 @@
         .navbar ul li a.active {
             background-color: #004080;
         }
-        /* Main Content */
         .container {
             padding: 20px;
+            flex: 1; /* Make sure content area grows to fill the screen */
         }
         h2 {
             color: #004080;
         }
-        /* Remove bullets and numbers */
         ul, ol {
-            list-style-type: none;
+            margin-left: 0; /* Remove bullets or numbers */
             padding-left: 0;
         }
-        /* Table Styles */
         .exam-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
         }
-        .exam-table th, .exam-table td {
+        .exam-table th,
+        .exam-table td {
             border: 1px solid #ddd;
             padding: 8px;
         }
@@ -74,9 +74,8 @@
             background-color: #004080;
             color: white;
         }
-        /* Footer */
         .footer {
-            background-color: #333;
+            background-color: #333; /* Black footer */
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -95,19 +94,18 @@
         <h1>Certified Information Systems Security Professional (CISSP)</h1>
     </header>
 
-    <!-- Navigation Menu -->
     <nav class="navbar">
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="cissp.html">CISSP</a></li>
+            <li><a href="cissp.html" class="active">CISSP</a></li>
             <li><a href="crisc.html">CRISC</a></li>
             <li><a href="securityplus.html">Security+</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
 
-    <!-- Main Content Section -->
+    <!-- Main Content -->
     <main class="container">
         <section class="overview">
             <h2>Overview</h2>
@@ -151,7 +149,6 @@
                 <li>Adhere to the (ISC)² Code of Ethics.</li>
                 <li>Get endorsed by an (ISC)² certified professional in good standing.</li>
             </ul>
-            <p>For those lacking the required experience, passing the exam can earn the Associate of (ISC)² designation, allowing six years to gain the necessary experience.</p>
         </section>
 
         <section class="exam-details">
