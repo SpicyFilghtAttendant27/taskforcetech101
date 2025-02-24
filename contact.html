@@ -5,6 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - TaskForceTech</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        /* Header */
+        header {
+            background-color: #d32f2f; /* Red background */
+            color: black; /* Black text */
+            padding: 20px 0;
+        }
+        header .logo img {
+            width: 120px; /* Smaller logo size */
+            height: auto;
+        }
+        nav {
+            background-color: #000; /* Black nav background */
+            overflow: hidden;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            display: inline-block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #004080;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Remove list bullets or numbers */
+        ul {
+            text-align: left;
+            padding-left: 0;
+        }
+        ul li {
+            list-style-type: none; /* No bullets or numbers */
+        }
+        footer {
+            background-color: #000; /* Black footer */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #004080;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #003366;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -33,6 +119,7 @@
                 <li><strong>Address:</strong> 123 Cyber Street, Fayetteville, NC</li>
             </ul>
         </section>
+
         <section class="contact-form">
             <h2>Send us a message</h2>
             <form action="submit-form.php" method="POST">
@@ -49,7 +136,7 @@
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 TaskForceTech. All Rights Reserved.</p>
+        <p>&copy; 2023 TaskForceTech. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
